@@ -1,0 +1,9 @@
+br
+ ul 
+  li
+    = task.title
+    p= task.description
+
+= link_to "Edit", edit_task_path(task), remote: true
+br
+= link_to "delete", task, remote: true, method: :delete,  data: { confirm: 'Are your sure?' }

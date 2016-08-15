@@ -1,0 +1,20 @@
+.container
+  h1 Hello World from Rails 5
+  hr
+  
+  .row
+    .col-md-5.col-md-offset-1
+      h2 Tasks
+      
+  .row
+    .col-md-6.col-md-offset-2
+      = link_to "New Task", new_task_path, remote: true
+  
+  .row
+    .col-md-6.col-md-offset-2
+      #task-form style="display:none;"
+
+  .row
+    .col-md-7.col-md-offset-1
+      #tasks
+        = render @tasks
